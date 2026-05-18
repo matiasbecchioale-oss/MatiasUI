@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Basic</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+  </head>
+  <body class="mui-body">
+    <main class="mui-hero">
+      <div class="mui-container mui-split">
+        <section class="mui-stack">
+          <span class="mui-badge">MatiasUI</span>
+          <h1 class="mui-title">Una web crimson en minutos</h1>
+          <p class="mui-subtitle">Carga el CSS, usa componentes y suma el JS para modales, dropdowns, tabs, toasts y mas.</p>
+          <div class="mui-cluster">
+            <button class="mui-btn mui-btn-primary" data-mui-toast="Hola desde MatiasUI">Probar toast</button>
+            <button class="mui-btn" data-mui-open-modal="#hello-modal">Abrir modal</button>
+          </div>
+        </section>
+        <aside class="mui-card mui-stack">
+          <h2>Login</h2>
+          <input class="mui-input" placeholder="Email">
+          <input class="mui-input" placeholder="Password" type="password">
+          <button class="mui-btn mui-btn-primary">Entrar</button>
+        </aside>
+      </div>
+    </main>
+
+    <div id="hello-modal" class="mui-modal-backdrop" aria-hidden="true">
+      <div class="mui-modal">
+        <div class="mui-modal-header">
+          <h2>Listo</h2>
+          <button class="mui-btn mui-btn-icon" data-mui-close-modal>×</button>
+        </div>
+        <div class="mui-modal-body">MatiasUI esta funcionando.</div>
+      </div>
+    </div>
+
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>

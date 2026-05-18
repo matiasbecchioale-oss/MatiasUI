@@ -1,0 +1,34 @@
+---
+title: MatiasUI
+description: Documentacion oficial de MatiasUI.
+template: splash
+hero:
+  title: MatiasUI
+  tagline: Componentes crimson, bloques completos e interacciones livianas para cualquier proyecto web.
+  actions:
+    - text: Empezar
+      icon: right-arrow
+      link: /guia/instalacion/
+    - text: Componentes
+      icon: puzzle
+      variant: minimal
+      link: /componentes/layout/
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="Instalacion rapida" icon="rocket" href="/guia/instalacion/">
+		CDN, archivos locales y uso minimo.
+	</Card>
+	<Card title="Componentes" icon="puzzle" href="/componentes/layout/">
+		Navs, forms, cards, modales, tablas, toasts, tabs y mas.
+	</Card>
+	<Card title="Bloques" icon="seti:html" href="/bloques/marketing/">
+		Marketing, application UI, ecommerce, publisher y estados.
+	</Card>
+	<Card title="Referencia" icon="document" href="/referencia/data-attributes/">
+		Clases, atributos `data-mui-*`, tokens CSS y CDN.
+	</Card>
+</CardGrid>
+

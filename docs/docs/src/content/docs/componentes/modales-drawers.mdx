@@ -1,0 +1,30 @@
+---
+title: Modales y drawers
+description: Dialogs, CRUD modals, popups y drawers.
+---
+
+## Modal
+
+```html
+<button class="mui-btn" data-mui-open-modal="#create-modal">Crear</button>
+
+<div id="create-modal" class="mui-modal-backdrop" aria-hidden="true">
+  <section class="mui-modal">
+    <div class="mui-modal-header">
+      <h2>Crear usuario</h2>
+      <button class="mui-btn mui-btn-icon" data-mui-close-modal>x</button>
+    </div>
+    <div class="mui-modal-body">Contenido</div>
+  </section>
+</div>
+```
+
+## Drawer
+
+```html
+<button class="mui-btn" data-mui-open-drawer="#drawer">Abrir</button>
+<div id="drawer" class="mui-drawer-backdrop">
+  <aside class="mui-drawer">Contenido</aside>
+</div>
+```
+

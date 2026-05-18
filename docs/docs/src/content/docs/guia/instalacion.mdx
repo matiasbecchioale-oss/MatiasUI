@@ -1,0 +1,46 @@
+---
+title: Instalacion
+description: Como instalar MatiasUI por CDN, local o npm.
+---
+
+## CDN
+
+Cuando publiques el paquete en npm, podras usar jsDelivr:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matias-ui@1/dist/matias-ui.css">
+<script defer src="https://cdn.jsdelivr.net/npm/matias-ui@1/dist/matias-ui.js"></script>
+```
+
+## Archivos locales
+
+Copia `dist/` a tu carpeta publica:
+
+```html
+<link rel="stylesheet" href="/matias-ui/matias-ui.css">
+<script defer src="/matias-ui/matias-ui.js"></script>
+```
+
+## Uso minimo
+
+```html
+<body class="mui-body">
+  <section class="mui-hero">
+    <div class="mui-container mui-split">
+      <div class="mui-stack">
+        <span class="mui-badge">Crimson UI</span>
+        <h1 class="mui-title">Interfaces rapidas con MatiasUI</h1>
+        <p class="mui-subtitle">Componentes listos para productos web.</p>
+        <a class="mui-btn mui-btn-primary" href="#">Empezar</a>
+      </div>
+      <div class="mui-hero-media"></div>
+    </div>
+  </section>
+</body>
+```
+
+## Que cargar
+
+- Carga solo el CSS si necesitas estilos.
+- Agrega el JS si usas modales, dropdowns, tabs, acordeones, drawers, toasts, copiar snippets o live preview.
+

@@ -1,0 +1,38 @@
+---
+title: Personalizacion
+description: Tokens CSS, tema crimson y modo oscuro.
+---
+
+MatiasUI usa variables CSS para que puedas cambiar identidad, radios, sombras y tipografia sin recompilar.
+
+```css
+:root {
+  --mui-primary: #c1123f;
+  --mui-primary-2: #8f0d2f;
+  --mui-primary-3: #f43f68;
+  --mui-accent: #0f766e;
+  --mui-radius: 8px;
+  --mui-font: Inter, system-ui, sans-serif;
+}
+```
+
+## Modo oscuro
+
+El archivo incluye soporte para:
+
+```html
+<html data-mui-theme="dark">
+```
+
+Y alternancia automatica si usas:
+
+```html
+<button class="mui-btn" data-mui-theme-toggle>Tema</button>
+```
+
+## Buenas practicas
+
+- Mantene el prefijo `mui-` para evitar colisiones.
+- Cambia tokens antes de crear variantes de componentes.
+- Usa utilidades (`mui-stack`, `mui-grid`, `mui-cluster`) para componer layouts.
+

@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Docs</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+    <style>
+      pre {
+        overflow: auto;
+        padding: 16px;
+        color: #fff7f8;
+        background: #241116;
+        border-radius: var(--mui-radius);
+      }
+      code {
+        font-family: var(--mui-mono);
+      }
+      .docs-anchor {
+        scroll-margin-top: 92px;
+      }
+    </style>
+  </head>
+  <body class="mui-body">
+    <nav class="mui-nav" data-mui-nav>
+      <div class="mui-container mui-nav-inner">
+        <a class="mui-brand" href="#">
+          <span class="mui-brand-mark">M</span>
+          <span>MatiasUI</span>
+        </a>
+        <button class="mui-btn mui-btn-icon mui-nav-toggle" type="button" data-mui-nav-toggle aria-expanded="false" aria-label="Abrir menu">☰</button>
+        <div class="mui-nav-links">
+          <a class="mui-nav-link" href="#instalacion">Instalacion</a>
+          <a class="mui-nav-link" href="#componentes">Componentes</a>
+          <a class="mui-nav-link" href="blocks.html">Blocks</a>
+          <a class="mui-nav-link" href="components.html">Galeria</a>
+          <a class="mui-nav-link" href="snippets.html">Snippets</a>
+          <a class="mui-nav-link" href="live.html">Live</a>
+          <a class="mui-nav-link" href="#formularios">Forms</a>
+          <a class="mui-nav-link" href="#crud">CRUD</a>
+          <button class="mui-btn mui-btn-soft" type="button" data-mui-theme-toggle>Tema</button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mui-hero">
+      <div class="mui-container mui-split">
+        <div class="mui-stack" style="--mui-gap: 18px">
+          <span class="mui-badge">v1.1.0 Crimson</span>
+          <h1 class="mui-title">MatiasUI para cualquier web</h1>
+          <p class="mui-subtitle">Una libreria CSS/JS con componentes listos para Astro, HTML plano, backends tradicionales y apps modernas.</p>
+          <div class="mui-cluster">
+            <a class="mui-btn mui-btn-primary mui-btn-lg" href="#instalacion">Instalar</a>
+            <a class="mui-btn mui-btn-lg" href="components.html">Ver galeria</a>
+            <button class="mui-btn mui-btn-lg" type="button" data-mui-open-modal="#demo-modal">Ver modal</button>
+            <button class="mui-btn mui-btn-soft mui-btn-lg" type="button" data-mui-toast="MatiasUI esta funcionando">Toast</button>
+          </div>
+        </div>
+        <div class="mui-viewer-3d" aria-label="Visor 3D decorativo">
+          <div class="mui-cube">
+            <span>M</span><span>UI</span><span>CSS</span><span>JS</span><span>3D</span><span>OK</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="instalacion" class="mui-section docs-anchor">
+        <div class="mui-container mui-stack" style="--mui-gap: 24px">
+          <div class="mui-stack">
+            <span class="mui-kicker">Instalacion</span>
+            <h2 class="mui-heading">CDN, local, npm y Astro</h2>
+            <p class="mui-subtitle">MatiasUI no necesita compilacion. Carga el CSS, suma el JS si queres interacciones, y usa clases HTML.</p>
+          </div>
+          <div class="mui-grid mui-grid-2">
+            <article class="mui-card">
+              <h3>CDN npm</h3>
+              <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matias-ui@1/dist/matias-ui.css"&gt;
+&lt;script defer src="https://cdn.jsdelivr.net/npm/matias-ui@1/dist/matias-ui.js"&gt;&lt;/script&gt;</code></pre>
+            </article>
+            <article class="mui-card">
+              <h3>Local</h3>
+              <pre><code>&lt;link rel="stylesheet" href="/dist/matias-ui.css"&gt;
+&lt;script defer src="/dist/matias-ui.js"&gt;&lt;/script&gt;</code></pre>
+            </article>
+            <article class="mui-card">
+              <h3>Astro import</h3>
+              <pre><code>---
+import "matias-ui/dist/matias-ui.css";
+---
+&lt;body class="mui-body"&gt;
+  &lt;slot /&gt;
+  &lt;script src="/node_modules/matias-ui/dist/matias-ui.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+            </article>
+            <article class="mui-card">
+              <h3>Tokens</h3>
+              <pre><code>:root {
+  --mui-primary: #c1123f;
+  --mui-accent: #0f766e;
+  --mui-radius: 8px;
+}</code></pre>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mui-section mui-section-sm">
+        <div class="mui-container mui-stack" style="--mui-gap: 22px">
+          <div>
+            <span class="mui-kicker">Mas docs</span>
+            <h2 class="mui-heading">Paginas nuevas</h2>
+          </div>
+          <div class="mui-grid mui-grid-3">
+            <a class="mui-card mui-card-hover mui-stack" href="components.html" style="text-decoration: none"><span class="mui-feature-icon">10</span><h3>Galeria extendida</h3><p class="mui-muted">Navegacion, contenido y app components.</p></a>
+            <a class="mui-card mui-card-hover mui-stack" href="blocks.html" style="text-decoration: none"><span class="mui-feature-icon">BLK</span><h3>MatiasUI Blocks</h3><p class="mui-muted">Marketing, app, ecommerce y publisher.</p></a>
+            <a class="mui-card mui-card-hover mui-stack" href="snippets.html" style="text-decoration: none"><span class="mui-feature-icon">&lt;/&gt;</span><h3>Snippets</h3><p class="mui-muted">Codigos HTML copiables.</p></a>
+            <a class="mui-card mui-card-hover mui-stack" href="live.html" style="text-decoration: none"><span class="mui-feature-icon">▶</span><h3>Live preview</h3><p class="mui-muted">Editor y preview en vivo.</p></a>
+            <a class="mui-card mui-card-hover mui-stack" href="animations.html" style="text-decoration: none"><span class="mui-feature-icon">FX</span><h3>Animaciones</h3><p class="mui-muted">Fade, pop, float, glow y mas.</p></a>
+            <a class="mui-card mui-card-hover mui-stack" href="file-tree.html" style="text-decoration: none"><span class="mui-feature-icon">DIR</span><h3>File tree</h3><p class="mui-muted">Estructura recomendada.</p></a>
+            <a class="mui-card mui-card-hover mui-stack" href="../examples/dashboard.html" style="text-decoration: none"><span class="mui-feature-icon">APP</span><h3>Dashboard example</h3><p class="mui-muted">Stats, inbox, kanban y tabla.</p></a>
+            <a class="mui-card mui-card-hover mui-stack" href="../examples/credit-card.html" style="text-decoration: none"><span class="mui-feature-icon">CARD</span><h3>Credit card demo</h3><p class="mui-muted">Tarjeta interactiva con pagos y seguridad.</p></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="componentes" class="mui-section mui-section-sm docs-anchor">
+        <div class="mui-container mui-stack" style="--mui-gap: 24px">
+          <div class="mui-stack">
+            <span class="mui-kicker">Componentes</span>
+            <h2 class="mui-heading">Botones, badges, cards, hovers y contenido</h2>
+          </div>
+          <div class="mui-cluster">
+            <button class="mui-btn">Default</button>
+            <button class="mui-btn mui-btn-primary">Primary</button>
+            <button class="mui-btn mui-btn-soft">Soft</button>
+            <button class="mui-btn mui-btn-ghost">Ghost</button>
+            <span class="mui-badge">Nuevo</span>
+            <span class="mui-badge mui-badge-success">Activo</span>
+            <span class="mui-badge mui-badge-warning">Pendiente</span>
+            <span class="mui-badge mui-badge-danger">Error</span>
+          </div>
+          <div class="mui-grid mui-grid-3">
+            <article class="mui-card mui-card-hover mui-stack">
+              <span class="mui-feature-icon">01</span>
+              <h3>Card de producto</h3>
+              <p class="mui-muted">Ideal para featured sections, colecciones y dashboards.</p>
+              <div class="mui-rating" aria-label="5 estrellas">★★★★★</div>
+            </article>
+            <article class="mui-card mui-card-hover mui-stack">
+              <span class="mui-feature-icon">02</span>
+              <h3>Seccion CTA</h3>
+              <p class="mui-muted">Bloques de accion con botones, texto y estado responsive.</p>
+              <button class="mui-btn mui-btn-primary">Comprar</button>
+            </article>
+            <article class="mui-card mui-card-hover mui-stack">
+              <span class="mui-feature-icon">03</span>
+              <h3>Skeleton</h3>
+              <div class="mui-skeleton"></div>
+              <div class="mui-skeleton" style="width: 70%"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="formularios" class="mui-section docs-anchor">
+        <div class="mui-container mui-grid mui-grid-2">
+          <article class="mui-card">
+            <h2>Login</h2>
+            <form class="mui-form">
+              <label class="mui-field">
+                <span class="mui-label">Email</span>
+                <input class="mui-input" type="email" placeholder="matias@email.com">
+              </label>
+              <label class="mui-field">
+                <span class="mui-label">Password</span>
+                <input class="mui-input" type="password" placeholder="••••••••">
+              </label>
+              <label class="mui-check">
+                <input type="checkbox">
+                <span>Recordarme</span>
+              </label>
+              <button class="mui-btn mui-btn-primary mui-w-full" type="button">Entrar</button>
+            </form>
+          </article>
+
+          <article class="mui-card">
+            <h2>Contacto</h2>
+            <form class="mui-form">
+              <label class="mui-field">
+                <span class="mui-label">Nombre</span>
+                <input class="mui-input" type="text" placeholder="Tu nombre">
+              </label>
+              <label class="mui-field">
+                <span class="mui-label">Tema</span>
+                <select class="mui-select">
+                  <option>Soporte</option>
+                  <option>Ventas</option>
+                  <option>Proyecto</option>
+                </select>
+              </label>
+              <label class="mui-field">
+                <span class="mui-label">Mensaje</span>
+                <textarea class="mui-textarea" placeholder="Contanos que necesitas"></textarea>
+              </label>
+              <button class="mui-btn mui-btn-primary" type="button">Enviar</button>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="mui-section mui-section-sm">
+        <div class="mui-container mui-checkout">
+          <div class="mui-stack">
+            <h2 class="mui-heading">Checkout</h2>
+            <div class="mui-card">
+              <form class="mui-form">
+                <div class="mui-grid mui-grid-2">
+                  <label class="mui-field"><span class="mui-label">Nombre</span><input class="mui-input"></label>
+                  <label class="mui-field"><span class="mui-label">Apellido</span><input class="mui-input"></label>
+                </div>
+                <label class="mui-field"><span class="mui-label">Tarjeta</span><input class="mui-input" placeholder="4242 4242 4242 4242"></label>
+                <div class="mui-grid mui-grid-2">
+                  <label class="mui-field"><span class="mui-label">Vence</span><input class="mui-input" placeholder="12/30"></label>
+                  <label class="mui-field"><span class="mui-label">CVV</span><input class="mui-input" placeholder="123"></label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <aside class="mui-card">
+            <h3>Resumen</h3>
+            <div class="mui-summary-row"><span>Plan Pro</span><strong>$29</strong></div>
+            <div class="mui-summary-row"><span>Impuestos</span><strong>$5</strong></div>
+            <div class="mui-summary-row"><span>Total</span><strong>$34</strong></div>
+            <button class="mui-btn mui-btn-primary mui-w-full" type="button">Confirmar</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="mui-section docs-anchor" id="crud">
+        <div class="mui-container mui-stack" style="--mui-gap: 24px">
+          <div class="mui-cluster" style="justify-content: space-between">
+            <div>
+              <span class="mui-kicker">CRUD</span>
+              <h2 class="mui-heading">Tablas, busqueda, dropdowns y modales</h2>
+            </div>
+            <button class="mui-btn mui-btn-primary" type="button" data-mui-open-modal="#create-modal">Crear usuario</button>
+          </div>
+          <div class="mui-card">
+            <div class="mui-cluster" style="justify-content: space-between; margin-bottom: 14px">
+              <label class="mui-search">
+                <input class="mui-input" placeholder="Buscar usuarios">
+              </label>
+              <div class="mui-dropdown" data-mui-dropdown>
+                <button class="mui-btn" type="button" data-mui-dropdown-trigger aria-expanded="false">Acciones</button>
+                <div class="mui-dropdown-menu">
+                  <button class="mui-menu-item" type="button">Exportar CSV</button>
+                  <button class="mui-menu-item" type="button">Duplicar</button>
+                  <button class="mui-menu-item" type="button">Archivar</button>
+                </div>
+              </div>
+            </div>
+            <div class="mui-table-wrap">
+              <table class="mui-table">
+                <thead>
+                  <tr><th>Usuario</th><th>Rol</th><th>Estado</th><th>Plan</th><th></th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Matias</td><td>Admin</td><td><span class="mui-badge mui-badge-success">Activo</span></td><td>Pro</td><td><button class="mui-btn mui-btn-soft" data-mui-open-modal="#create-modal">Editar</button></td></tr>
+                  <tr><td>Sofia</td><td>Editor</td><td><span class="mui-badge">Nuevo</span></td><td>Starter</td><td><button class="mui-btn mui-btn-soft" data-mui-open-modal="#create-modal">Editar</button></td></tr>
+                  <tr><td>Lucas</td><td>Viewer</td><td><span class="mui-badge mui-badge-warning">Pausa</span></td><td>Team</td><td><button class="mui-btn mui-btn-soft" data-mui-open-modal="#create-modal">Editar</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mui-section mui-section-sm">
+        <div class="mui-container mui-pricing">
+          <article class="mui-card mui-stack">
+            <span class="mui-badge">Starter</span>
+            <div class="mui-price">$9 <small>/mes</small></div>
+            <p class="mui-muted">Para proyectos chicos.</p>
+            <button class="mui-btn mui-w-full">Elegir</button>
+          </article>
+          <article class="mui-card mui-card-hover mui-stack" style="border-color: var(--mui-primary)">
+            <span class="mui-badge">Popular</span>
+            <div class="mui-price">$29 <small>/mes</small></div>
+            <p class="mui-muted">Para equipos y productos reales.</p>
+            <button class="mui-btn mui-btn-primary mui-w-full">Elegir</button>
+          </article>
+          <article class="mui-card mui-stack">
+            <span class="mui-badge">Enterprise</span>
+            <div class="mui-price">$99 <small>/mes</small></div>
+            <p class="mui-muted">Para operaciones grandes.</p>
+            <button class="mui-btn mui-w-full">Hablar</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="mui-section">
+        <div class="mui-container mui-grid mui-grid-2">
+          <article class="mui-card mui-profile-card mui-stack">
+            <span class="mui-avatar">M</span>
+            <h2>Matias Developer</h2>
+            <p class="mui-muted">Frontend, UI systems y productos web.</p>
+            <div class="mui-cluster" style="justify-content: center">
+              <span class="mui-badge">Astro</span>
+              <span class="mui-badge">CSS</span>
+              <span class="mui-badge">JS</span>
+            </div>
+          </article>
+          <article class="mui-cta mui-stack">
+            <span class="mui-kicker" style="color: white">CTA</span>
+            <h2 class="mui-heading">Construye paginas completas con una clase por pieza.</h2>
+            <p class="mui-muted">MatiasUI cubre landing, auth, ecommerce, perfiles, dashboards y CRUD basico.</p>
+            <button class="mui-btn" type="button">Descargar</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="mui-section mui-section-sm">
+        <div class="mui-container mui-grid mui-grid-2">
+          <div class="mui-tabs" data-mui-tabs>
+            <div class="mui-tab-list" role="tablist">
+              <button class="mui-tab" role="tab" data-mui-tab="#tab-one" aria-selected="true">HTML</button>
+              <button class="mui-tab" role="tab" data-mui-tab="#tab-two" aria-selected="false">JS</button>
+            </div>
+            <div id="tab-one" class="mui-tab-panel mui-card" role="tabpanel">
+              Usa clases `mui-*` directamente en tu markup.
+            </div>
+            <div id="tab-two" class="mui-tab-panel mui-card" role="tabpanel" hidden>
+              Usa atributos `data-mui-*` para interacciones.
+            </div>
+          </div>
+
+          <div class="mui-accordion" data-mui-accordion>
+            <div class="mui-accordion-item is-open">
+              <button class="mui-accordion-trigger" type="button" data-mui-accordion-trigger aria-expanded="true">¿Necesita framework?<span>+</span></button>
+              <div class="mui-accordion-panel">No. Funciona con HTML, CSS y JS.</div>
+            </div>
+            <div class="mui-accordion-item">
+              <button class="mui-accordion-trigger" type="button" data-mui-accordion-trigger aria-expanded="false">¿Puedo cambiar colores?<span>+</span></button>
+              <div class="mui-accordion-panel">Si, sobrescribiendo variables CSS.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mui-footer">
+      <div class="mui-container mui-footer-grid">
+        <div>
+          <a class="mui-brand" href="#"><span class="mui-brand-mark">M</span><span>MatiasUI</span></a>
+          <p>Libreria crimson para interfaces rapidas y elegantes.</p>
+        </div>
+        <div><strong>Docs</strong><a href="#instalacion">Instalar</a><a href="#componentes">Componentes</a></div>
+        <div><strong>UI</strong><a href="#formularios">Forms</a><a href="#crud">CRUD</a></div>
+        <div><strong>Social</strong><a href="#">GitHub</a><a href="#">Website</a></div>
+      </div>
+    </footer>
+
+    <div id="demo-modal" class="mui-modal-backdrop" aria-hidden="true">
+      <section class="mui-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+        <div class="mui-modal-header">
+          <h2 id="demo-modal-title">Modal MatiasUI</h2>
+          <button class="mui-btn mui-btn-icon" type="button" data-mui-close-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="mui-modal-body">
+          <p class="mui-muted">Los modales se abren con `data-mui-open-modal="#demo-modal"` y se cierran con `data-mui-close-modal`.</p>
+        </div>
+        <div class="mui-modal-footer">
+          <button class="mui-btn" type="button" data-mui-close-modal>Cancelar</button>
+          <button class="mui-btn mui-btn-primary" type="button" data-mui-close-modal>Aceptar</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="create-modal" class="mui-modal-backdrop" aria-hidden="true">
+      <section class="mui-modal" role="dialog" aria-modal="true" aria-labelledby="create-modal-title">
+        <div class="mui-modal-header">
+          <h2 id="create-modal-title">Crear usuario</h2>
+          <button class="mui-btn mui-btn-icon" type="button" data-mui-close-modal aria-label="Cerrar">×</button>
+        </div>
+        <form class="mui-modal-body mui-form">
+          <label class="mui-field"><span class="mui-label">Nombre</span><input class="mui-input" placeholder="Nombre completo"></label>
+          <label class="mui-field"><span class="mui-label">Email</span><input class="mui-input" type="email" placeholder="email@dominio.com"></label>
+          <label class="mui-field"><span class="mui-label">Rol</span><select class="mui-select"><option>Admin</option><option>Editor</option><option>Viewer</option></select></label>
+        </form>
+        <div class="mui-modal-footer">
+          <button class="mui-btn" type="button" data-mui-close-modal>Cancelar</button>
+          <button class="mui-btn mui-btn-primary" type="button" data-mui-close-modal>Guardar</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>

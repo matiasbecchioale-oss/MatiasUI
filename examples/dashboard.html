@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Dashboard</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+  </head>
+  <body class="mui-body">
+    <div class="mui-sidebar-layout">
+      <aside class="mui-sidebar mui-stack">
+        <a class="mui-brand" href="#"><span class="mui-brand-mark">M</span><span>Dashboard</span></a>
+        <a class="mui-sidebar-link" aria-current="page" href="#">Overview</a>
+        <a class="mui-sidebar-link" href="#">Usuarios</a>
+        <a class="mui-sidebar-link" href="#">Ventas</a>
+        <a class="mui-sidebar-link" href="#">Settings</a>
+      </aside>
+      <main class="mui-section-sm">
+        <div class="mui-container mui-stack" style="--mui-gap: 22px">
+          <div class="mui-cluster" style="justify-content: space-between">
+            <div><span class="mui-badge">Live app</span><h1 class="mui-heading">Dashboard</h1></div>
+            <label class="mui-search"><input class="mui-input" data-mui-search-focus placeholder="Buscar"></label>
+          </div>
+          <section class="mui-metric-row">
+            <article class="mui-card"><span class="mui-muted">Revenue</span><div class="mui-stat-value" data-mui-count-to="8400">0</div></article>
+            <article class="mui-card"><span class="mui-muted">Users</span><div class="mui-stat-value" data-mui-count-to="1240">0</div></article>
+            <article class="mui-card"><span class="mui-muted">Orders</span><div class="mui-stat-value" data-mui-count-to="312">0</div></article>
+            <article class="mui-card"><span class="mui-muted">NPS</span><div class="mui-stat-value" data-mui-count-to="92">0</div></article>
+          </section>
+          <section class="mui-grid mui-grid-2">
+            <article class="mui-card mui-stack">
+              <h2>Kanban</h2>
+              <div class="mui-kanban">
+                <div class="mui-kanban-column"><strong>Todo</strong><div class="mui-card">Publicar docs</div></div>
+                <div class="mui-kanban-column"><strong>Doing</strong><div class="mui-card">Pulir snippets</div></div>
+                <div class="mui-kanban-column"><strong>Done</strong><div class="mui-card">CSS v1.1</div></div>
+              </div>
+            </article>
+            <article class="mui-card mui-stack">
+              <h2>Inbox</h2>
+              <div class="mui-inbox">
+                <div class="mui-inbox-item"><span class="mui-avatar">S</span><span>Nuevo cliente</span><span class="mui-badge">New</span></div>
+                <div class="mui-inbox-item"><span class="mui-avatar">M</span><span>Deploy listo</span><span class="mui-badge mui-badge-success">OK</span></div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>

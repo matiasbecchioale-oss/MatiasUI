@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Blocks</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+    <style>
+      pre{overflow:auto;padding:14px;color:#fff7f8;background:#241116;border-radius:var(--mui-radius);font-size:.86rem}
+      code{font-family:var(--mui-mono)}
+    </style>
+  </head>
+  <body class="mui-body">
+    <nav class="mui-nav" data-mui-nav>
+      <div class="mui-container mui-nav-inner">
+        <a class="mui-brand" href="./"><span class="mui-brand-mark">M</span><span>MatiasUI Blocks</span></a>
+        <button class="mui-btn mui-btn-icon mui-nav-toggle" data-mui-nav-toggle aria-expanded="false">☰</button>
+        <div class="mui-nav-links">
+          <a class="mui-nav-link" href="./">Docs</a>
+          <a class="mui-nav-link" href="components.html">Componentes</a>
+          <a class="mui-nav-link" href="snippets.html">Snippets</a>
+          <a class="mui-nav-link" href="live.html">Live</a>
+          <button class="mui-btn mui-btn-soft" data-mui-theme-toggle>Tema</button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mui-block-hero">
+      <div class="mui-container mui-split">
+        <div class="mui-stack mui-animate-slide-up">
+          <span class="mui-badge">Original crimson block kit</span>
+          <h1 class="mui-title">Bloques MatiasUI para construir paginas completas</h1>
+          <p class="mui-subtitle">Catalogo propio inspirado en la cobertura habitual de librerias de bloques: marketing, application UI, ecommerce y publisher, sin copiar markup ni documentacion de terceros.</p>
+          <div class="mui-cluster">
+            <a class="mui-btn mui-btn-primary mui-btn-lg" href="#marketing">Explorar bloques</a>
+            <a class="mui-btn mui-btn-lg" href="live.html">Probar en live</a>
+          </div>
+        </div>
+        <div class="mui-card mui-stack mui-animate-float">
+          <div class="mui-metric-row">
+            <div class="mui-stat"><span class="mui-muted">Familias</span><strong class="mui-stat-value">4</strong></div>
+            <div class="mui-stat"><span class="mui-muted">Categorias</span><strong class="mui-stat-value">50+</strong></div>
+            <div class="mui-stat"><span class="mui-muted">Tema</span><strong class="mui-stat-value">Crimson</strong></div>
+            <div class="mui-stat"><span class="mui-muted">Stack</span><strong class="mui-stat-value">HTML</strong></div>
+          </div>
+          <label class="mui-search">
+            <input class="mui-input" data-mui-search-focus data-mui-block-filter="#block-catalog" placeholder="Buscar bloque: hero, checkout, CRUD...">
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main class="mui-section">
+      <div class="mui-container mui-block-browser">
+        <aside class="mui-card mui-block-nav">
+          <strong>Categorias</strong>
+          <a href="#marketing">Marketing UI</a>
+          <a href="#application">Application UI</a>
+          <a href="#ecommerce">E-commerce UI</a>
+          <a href="#publisher">Publisher UI</a>
+          <a href="#pages">Paginas y estados</a>
+          <a href="#docs">Documentacion</a>
+        </aside>
+
+        <div id="block-catalog" class="mui-stack" style="--mui-gap: 34px">
+          <section id="marketing" class="mui-block-group mui-stack">
+            <div>
+              <span class="mui-kicker">Marketing UI</span>
+              <h2 class="mui-heading">10 bloques de adquisicion</h2>
+            </div>
+            <div class="mui-block-list">
+              <article class="mui-block-item" data-mui-block-item="marketing hero headers landing">
+                <div class="mui-block-meta"><span class="mui-badge">Hero Sections</span><h3>Hero con CTA doble</h3><p class="mui-muted">Portada para SaaS, app o producto digital.</p><button class="mui-btn mui-btn-soft" data-mui-copy="#code-hero">Copiar</button></div>
+                <div class="mui-block-preview"><section class="mui-stack"><span class="mui-badge">Nuevo</span><h2 class="mui-heading">Lanza tu producto crimson</h2><p class="mui-muted">Bloque hero con texto, prueba social y acciones.</p><div class="mui-cluster"><button class="mui-btn mui-btn-primary">Empezar</button><button class="mui-btn">Ver demo</button></div></section><pre id="code-hero"><code>&lt;section class="mui-stack"&gt;...&lt;/section&gt;</code></pre></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing feature sections">
+                <div class="mui-block-meta"><span class="mui-badge">Feature Sections</span><h3>Grid de funcionalidades</h3><p class="mui-muted">Tres o cuatro ventajas con iconos.</p></div>
+                <div class="mui-block-preview"><div class="mui-grid mui-grid-3"><div class="mui-card"><span class="mui-feature-icon">1</span><h3>Rapido</h3></div><div class="mui-card"><span class="mui-feature-icon">2</span><h3>Flexible</h3></div><div class="mui-card"><span class="mui-feature-icon">3</span><h3>Crimson</h3></div></div></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing pricing tables">
+                <div class="mui-block-meta"><span class="mui-badge">Pricing Tables</span><h3>Planes de precio</h3><p class="mui-muted">Starter, Pro y Enterprise.</p></div>
+                <div class="mui-block-preview"><div class="mui-pricing"><div class="mui-card"><strong>Starter</strong><div class="mui-price">$9</div></div><div class="mui-card" style="border-color:var(--mui-primary)"><strong>Pro</strong><div class="mui-price">$29</div></div><div class="mui-card"><strong>Team</strong><div class="mui-price">$79</div></div></div></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing cta sections">
+                <div class="mui-block-meta"><span class="mui-badge">CTA Sections</span><h3>Conversion band</h3><p class="mui-muted">Banda de accion final para landing.</p></div>
+                <div class="mui-block-preview"><div class="mui-cta mui-stack"><h2>Construye mas rapido</h2><p class="mui-muted">Componentes listos.</p><button class="mui-btn">Descargar</button></div></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing testimonials social proof">
+                <div class="mui-block-meta"><span class="mui-badge">Testimonials</span><h3>Prueba social</h3><p class="mui-muted">Cards de clientes y rating.</p></div>
+                <div class="mui-block-preview"><div class="mui-grid mui-grid-2"><div class="mui-card"><div class="mui-rating">★★★★★</div><p>Excelente kit UI.</p></div><div class="mui-card"><div class="mui-rating">★★★★★</div><p>Muy rapido de usar.</p></div></div></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing faq accordion">
+                <div class="mui-block-meta"><span class="mui-badge">FAQ Sections</span><h3>Preguntas frecuentes</h3><p class="mui-muted">Acordeon compacto.</p></div>
+                <div class="mui-block-preview"><div class="mui-accordion" data-mui-accordion><div class="mui-accordion-item is-open"><button class="mui-accordion-trigger" data-mui-accordion-trigger>¿Funciona con Astro?<span>+</span></button><div class="mui-accordion-panel">Si, es HTML/CSS/JS.</div></div></div></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing contact forms newsletter">
+                <div class="mui-block-meta"><span class="mui-badge">Contact + Newsletter</span><h3>Captura de leads</h3><p class="mui-muted">Form corto para conversion.</p></div>
+                <div class="mui-block-preview"><form class="mui-form"><input class="mui-input" placeholder="Email"><textarea class="mui-textarea" placeholder="Mensaje"></textarea><button class="mui-btn mui-btn-primary">Enviar</button></form></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing team sections portfolio logos">
+                <div class="mui-block-meta"><span class="mui-badge">Team + Portfolio + Logos</span><h3>Confianza visual</h3><p class="mui-muted">Equipo, marcas y trabajos.</p></div>
+                <div class="mui-block-preview"><div class="mui-cluster"><span class="mui-avatar">M</span><span class="mui-avatar">S</span><span class="mui-avatar">L</span><span class="mui-chip">Astro</span><span class="mui-chip">Laravel</span></div></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing banners popups">
+                <div class="mui-block-meta"><span class="mui-badge">Banners + Popups</span><h3>Promociones</h3><p class="mui-muted">Alertas, cookies y ofertas.</p></div>
+                <div class="mui-block-preview"><div class="mui-alert"><strong>20% off</strong><span class="mui-muted">Hasta hoy.</span><button class="mui-btn mui-btn-icon" data-mui-dismiss=".mui-alert">x</button></div></div>
+              </article>
+              <article class="mui-block-item" data-mui-block-item="marketing event schedule">
+                <div class="mui-block-meta"><span class="mui-badge">Event Schedule</span><h3>Agenda de eventos</h3><p class="mui-muted">Timeline de charlas o lanzamientos.</p></div>
+                <div class="mui-block-preview"><div class="mui-timeline"><div class="mui-timeline-item"><strong>10:00</strong> Apertura</div><div class="mui-timeline-item"><strong>12:00</strong> Workshop</div></div></div>
+              </article>
+            </div>
+          </section>
+
+          <section id="application" class="mui-block-group mui-stack">
+            <div><span class="mui-kicker">Application UI</span><h2 class="mui-heading">10 bloques para dashboards y CRUD</h2></div>
+            <div class="mui-block-list">
+              <article class="mui-block-item" data-mui-block-item="application dashboard navbar footer shell"><div class="mui-block-meta"><span class="mui-badge">App Shell</span><h3>Sidebar + contenido</h3><p class="mui-muted">Estructura base de dashboard.</p></div><div class="mui-block-preview"><div class="mui-sidebar-layout" style="min-height:220px"><aside class="mui-sidebar" style="height:auto"><a class="mui-sidebar-link" aria-current="page">Overview</a><a class="mui-sidebar-link">Settings</a></aside><main class="mui-card"><h3>Panel</h3><p class="mui-muted">Contenido principal.</p></main></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="application table headers advanced tables"><div class="mui-block-meta"><span class="mui-badge">Advanced Tables</span><h3>Tabla con header</h3><p class="mui-muted">Busqueda, filtros y acciones.</p></div><div class="mui-block-preview"><div class="mui-cluster" style="justify-content:space-between"><input class="mui-input" placeholder="Buscar"><button class="mui-btn">Exportar</button></div><div class="mui-table-wrap"><table class="mui-table"><tr><th>Item</th><th>Estado</th></tr><tr><td>Factura</td><td><span class="mui-badge">Nueva</span></td></tr></table></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="application crud create update read delete modals"><div class="mui-block-meta"><span class="mui-badge">CRUD Modals</span><h3>Crear/editar/eliminar</h3><p class="mui-muted">Acciones de registros.</p></div><div class="mui-block-preview"><button class="mui-btn mui-btn-primary" data-mui-open-modal="#block-crud-modal">Crear registro</button></div></article>
+              <article class="mui-block-item" data-mui-block-item="application crud drawers"><div class="mui-block-meta"><span class="mui-badge">CRUD Drawers</span><h3>Drawer lateral</h3><p class="mui-muted">Form sin salir de pantalla.</p></div><div class="mui-block-preview"><button class="mui-btn" data-mui-open-drawer="#block-drawer">Abrir drawer</button></div></article>
+              <article class="mui-block-item" data-mui-block-item="application faceted search filters dropdown filters"><div class="mui-block-meta"><span class="mui-badge">Faceted Search</span><h3>Filtros combinados</h3><p class="mui-muted">Chips, search y dropdowns.</p></div><div class="mui-block-preview"><div class="mui-cluster"><label class="mui-search"><input class="mui-input" placeholder="Buscar"></label><span class="mui-chip"><span class="mui-chip-dot"></span>Activo</span><span class="mui-chip">Pro</span></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="application side navigations"><div class="mui-block-meta"><span class="mui-badge">Side Navigation</span><h3>Menu lateral</h3><p class="mui-muted">Links de seccion.</p></div><div class="mui-block-preview"><aside class="mui-card"><a class="mui-sidebar-link" aria-current="page">Home</a><a class="mui-sidebar-link">Users</a><a class="mui-sidebar-link">Billing</a></aside></div></article>
+              <article class="mui-block-item" data-mui-block-item="application stats analytics widgets"><div class="mui-block-meta"><span class="mui-badge">Stats Widgets</span><h3>Métricas</h3><p class="mui-muted">Indicadores con contador.</p></div><div class="mui-block-preview"><div class="mui-metric-row"><div class="mui-card"><span class="mui-muted">MRR</span><div class="mui-stat-value">42k</div></div><div class="mui-card"><span class="mui-muted">Users</span><div class="mui-stat-value">8k</div></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="application command menu notifications inbox"><div class="mui-block-meta"><span class="mui-badge">Command + Inbox</span><h3>Productividad</h3><p class="mui-muted">Busqueda de comandos y notificaciones.</p></div><div class="mui-block-preview"><div class="mui-command"><input class="mui-input" placeholder="Comando"><div class="mui-command-list"><button class="mui-menu-item">Crear usuario</button><button class="mui-menu-item">Abrir inbox</button></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="application kanban calendar chat"><div class="mui-block-meta"><span class="mui-badge">Kanban + Calendar + Chat</span><h3>Trabajo colaborativo</h3><p class="mui-muted">Bloques internos de app.</p></div><div class="mui-block-preview"><div class="mui-grid mui-grid-2"><div class="mui-kanban"><div class="mui-kanban-column"><strong>Todo</strong><div class="mui-card">Tarea</div></div></div><div class="mui-chat"><div class="mui-message">Listo?</div><div class="mui-message mui-message-self">Si</div></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="application profile settings onboarding forms account recovery reset password"><div class="mui-block-meta"><span class="mui-badge">Account Forms</span><h3>Auth y settings</h3><p class="mui-muted">Login, registro, recovery y perfil.</p></div><div class="mui-block-preview"><form class="mui-form"><input class="mui-input" placeholder="Email"><input class="mui-input" placeholder="Password"><button class="mui-btn mui-btn-primary">Entrar</button></form></div></article>
+            </div>
+          </section>
+
+          <section id="ecommerce" class="mui-block-group mui-stack">
+            <div><span class="mui-kicker">E-commerce UI</span><h2 class="mui-heading">10 bloques de tienda</h2></div>
+            <div class="mui-block-list">
+              <article class="mui-block-item" data-mui-block-item="ecommerce storefront heroes"><div class="mui-block-meta"><span class="mui-badge">Storefront Hero</span><h3>Portada de tienda</h3><p class="mui-muted">Oferta, producto y CTA.</p></div><div class="mui-block-preview"><div class="mui-split"><div><span class="mui-badge">Sale</span><h2>Crimson Store</h2><button class="mui-btn mui-btn-primary">Comprar</button></div><div class="mui-product-media"></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce product cards"><div class="mui-block-meta"><span class="mui-badge">Product Cards</span><h3>Catalogo</h3><p class="mui-muted">Cards de productos.</p></div><div class="mui-block-preview"><div class="mui-grid mui-grid-3"><div class="mui-card mui-product-tile"><div class="mui-product-media"></div><strong>Producto</strong><span>$49</span></div><div class="mui-card mui-product-tile"><div class="mui-product-media"></div><strong>Producto</strong><span>$79</span></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce product overview"><div class="mui-block-meta"><span class="mui-badge">Product Overview</span><h3>Detalle de producto</h3><p class="mui-muted">Galeria, precio y variantes.</p></div><div class="mui-block-preview"><div class="mui-grid mui-grid-2"><div class="mui-product-media"></div><div><h3>Producto Max</h3><div class="mui-rating">★★★★★</div><div class="mui-price">$99</div><button class="mui-btn mui-btn-primary">Agregar</button></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce shopping cart"><div class="mui-block-meta"><span class="mui-badge">Shopping Cart</span><h3>Carrito</h3><p class="mui-muted">Items y cantidades.</p></div><div class="mui-block-preview"><div class="mui-list"><div class="mui-list-item"><span>Producto Pro</span><strong>$49</strong></div><div class="mui-list-item"><span>Producto Team</span><strong>$79</strong></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce checkout payment forms"><div class="mui-block-meta"><span class="mui-badge">Checkout + Payment</span><h3>Pago</h3><p class="mui-muted">Form de tarjeta y resumen.</p></div><div class="mui-block-preview"><form class="mui-form"><input class="mui-input" placeholder="4242 4242 4242 4242"><div class="mui-grid mui-grid-2"><input class="mui-input" placeholder="12/30"><input class="mui-input" placeholder="123"></div><button class="mui-btn mui-btn-primary">Pagar</button></form></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce order summary"><div class="mui-block-meta"><span class="mui-badge">Order Summary</span><h3>Resumen</h3><p class="mui-muted">Subtotal, impuestos y total.</p></div><div class="mui-block-preview"><div class="mui-card"><div class="mui-summary-row"><span>Subtotal</span><strong>$120</strong></div><div class="mui-summary-row"><span>Total</span><strong>$136</strong></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce order tracking"><div class="mui-block-meta"><span class="mui-badge">Order Tracking</span><h3>Seguimiento</h3><p class="mui-muted">Estado del envio.</p></div><div class="mui-block-preview"><div class="mui-stepper"><div class="mui-step"><span class="mui-step-number">1</span><div>Pagado</div></div><div class="mui-step"><span class="mui-step-number">2</span><div>Enviado</div></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce refund flows"><div class="mui-block-meta"><span class="mui-badge">Refund Flow</span><h3>Devolucion</h3><p class="mui-muted">Motivo y confirmacion.</p></div><div class="mui-block-preview"><form class="mui-form"><select class="mui-select"><option>Producto equivocado</option><option>No llego</option></select><textarea class="mui-textarea" placeholder="Detalle"></textarea></form></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce discount popups"><div class="mui-block-meta"><span class="mui-badge">Discount Popup</span><h3>Oferta modal</h3><p class="mui-muted">Promocion de salida.</p></div><div class="mui-block-preview"><div class="mui-popup mui-card" style="position:static;width:auto"><span class="mui-badge">15% off</span><h3>Compra hoy</h3><button class="mui-btn mui-btn-primary">Aplicar</button></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="ecommerce mega footer"><div class="mui-block-meta"><span class="mui-badge">Mega Footer</span><h3>Footer de tienda</h3><p class="mui-muted">Links, ayuda y legal.</p></div><div class="mui-block-preview"><footer class="mui-footer" style="padding:18px"><div class="mui-footer-grid"><div><strong>Shop</strong></div><div><a>Ayuda</a><a>Envios</a></div><div><a>Legal</a></div><div><a>Social</a></div></div></footer></div></article>
+            </div>
+          </section>
+
+          <section id="publisher" class="mui-block-group mui-stack">
+            <div><span class="mui-kicker">Publisher UI</span><h2 class="mui-heading">10 bloques editoriales</h2></div>
+            <div class="mui-block-list">
+              <article class="mui-block-item" data-mui-block-item="publisher blog templates"><div class="mui-block-meta"><span class="mui-badge">Blog Templates</span><h3>Home editorial</h3><p class="mui-muted">Grid para articulos.</p></div><div class="mui-block-preview"><div class="mui-grid mui-grid-2"><article class="mui-blog-card"><div class="mui-blog-media"></div><h3>Articulo destacado</h3></article><article class="mui-blog-card"><div class="mui-blog-media"></div><h3>Guia MatiasUI</h3></article></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher blog sections"><div class="mui-block-meta"><span class="mui-badge">Blog Sections</span><h3>Lista de posts</h3><p class="mui-muted">Items compactos.</p></div><div class="mui-block-preview"><ul class="mui-list"><li class="mui-list-item"><span>Como crear una UI</span><span>5 min</span></li><li class="mui-list-item"><span>CSS tokens</span><span>8 min</span></li></ul></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher article header"><div class="mui-block-meta"><span class="mui-badge">Article Header</span><h3>Cabecera de articulo</h3><p class="mui-muted">Titulo, autor y metadata.</p></div><div class="mui-block-preview"><header class="mui-stack"><span class="mui-badge">CSS</span><h2>Construir sistemas UI</h2><div class="mui-cluster"><span class="mui-avatar">M</span><span class="mui-muted">Matias · 10 min</span></div></header></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher related articles"><div class="mui-block-meta"><span class="mui-badge">Related Articles</span><h3>Relacionados</h3><p class="mui-muted">Tarjetas post articulo.</p></div><div class="mui-block-preview"><div class="mui-grid mui-grid-3"><div class="mui-card">Tokens</div><div class="mui-card">Forms</div><div class="mui-card">Tables</div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher comments sections"><div class="mui-block-meta"><span class="mui-badge">Comments</span><h3>Comentarios</h3><p class="mui-muted">Thread simple.</p></div><div class="mui-block-preview"><div class="mui-comment"><span class="mui-avatar">A</span><div><strong>Ana</strong><p class="mui-muted">Muy util.</p></div></div><div class="mui-comment"><span class="mui-avatar">L</span><div><strong>Luis</strong><p class="mui-muted">Lo use en Astro.</p></div></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher author bio"><div class="mui-block-meta"><span class="mui-badge">Author Bio</span><h3>Autor</h3><p class="mui-muted">Perfil del escritor.</p></div><div class="mui-block-preview"><div class="mui-profile-card mui-card"><span class="mui-avatar">M</span><h3>Matias</h3><p class="mui-muted">UI developer.</p></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher newsletter"><div class="mui-block-meta"><span class="mui-badge">Newsletter</span><h3>Suscripcion</h3><p class="mui-muted">Captura editorial.</p></div><div class="mui-block-preview"><form class="mui-form"><input class="mui-input" placeholder="Email"><button class="mui-btn mui-btn-primary">Suscribirme</button></form></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher tags categories"><div class="mui-block-meta"><span class="mui-badge">Tags</span><h3>Temas</h3><p class="mui-muted">Chips de categorias.</p></div><div class="mui-block-preview"><div class="mui-cluster"><span class="mui-chip">CSS</span><span class="mui-chip">Astro</span><span class="mui-chip">UX</span><span class="mui-chip">JS</span></div></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher quote callout"><div class="mui-block-meta"><span class="mui-badge">Quote Callout</span><h3>Cita destacada</h3><p class="mui-muted">Bloque editorial.</p></div><div class="mui-block-preview"><blockquote class="mui-card" style="border-left:5px solid var(--mui-primary)">Una buena UI reduce friccion y aumenta claridad.</blockquote></div></article>
+              <article class="mui-block-item" data-mui-block-item="publisher table of contents"><div class="mui-block-meta"><span class="mui-badge">Table of Contents</span><h3>Indice</h3><p class="mui-muted">Navegacion de articulo.</p></div><div class="mui-block-preview"><nav class="mui-card"><a class="mui-sidebar-link">Introduccion</a><a class="mui-sidebar-link">Instalacion</a><a class="mui-sidebar-link">Componentes</a></nav></div></article>
+            </div>
+          </section>
+
+          <section id="pages" class="mui-block-group mui-stack">
+            <div><span class="mui-kicker">Pages + States</span><h2 class="mui-heading">Errores, mantenimiento y estados</h2></div>
+            <div class="mui-grid mui-grid-3">
+              <article class="mui-card mui-stack" data-mui-block-item="404 pages"><span class="mui-badge">404 Pages</span><h3>Pagina no encontrada</h3><p class="mui-muted">Estado para rutas inexistentes.</p><button class="mui-btn">Volver</button></article>
+              <article class="mui-card mui-stack" data-mui-block-item="500 pages"><span class="mui-badge">500 Pages</span><h3>Error de servidor</h3><p class="mui-muted">Mensaje de recuperacion.</p><button class="mui-btn">Reintentar</button></article>
+              <article class="mui-card mui-stack" data-mui-block-item="maintenance pages"><span class="mui-badge">Maintenance Pages</span><h3>Mantenimiento</h3><p class="mui-muted">Aviso temporal.</p><div class="mui-progress"><span style="--mui-value:62%"></span></div></article>
+              <article class="mui-card mui-stack" data-mui-block-item="empty states"><span class="mui-badge">Empty States</span><div class="mui-empty">Sin datos todavia</div></article>
+              <article class="mui-card mui-stack" data-mui-block-item="loading skeleton"><span class="mui-badge">Loading</span><div class="mui-skeleton"></div><div class="mui-skeleton" style="width:72%"></div></article>
+              <article class="mui-card mui-stack" data-mui-block-item="success confirmation"><span class="mui-badge mui-badge-success">Success</span><h3>Operacion completa</h3><button class="mui-btn mui-btn-primary">Continuar</button></article>
+            </div>
+          </section>
+
+          <section id="docs" class="mui-block-group mui-stack">
+            <div><span class="mui-kicker">Documentacion</span><h2 class="mui-heading">Como usar estos bloques</h2></div>
+            <div class="mui-grid mui-grid-2">
+              <article class="mui-card mui-stack"><h3>1. Carga MatiasUI</h3><pre><code>&lt;link rel="stylesheet" href="/dist/matias-ui.css"&gt;
+&lt;script defer src="/dist/matias-ui.js"&gt;&lt;/script&gt;</code></pre></article>
+              <article class="mui-card mui-stack"><h3>2. Copia un bloque</h3><p class="mui-muted">Usa el preview como base, cambia textos, datos e imagenes, y conserva clases `mui-*`.</p></article>
+              <article class="mui-card mui-stack"><h3>3. Activa interacciones</h3><pre><code>data-mui-open-modal="#id"
+data-mui-dropdown
+data-mui-accordion
+data-mui-copy="#snippet"</code></pre></article>
+              <article class="mui-card mui-stack"><h3>4. Personaliza tokens</h3><pre><code>:root {
+  --mui-primary: #c1123f;
+  --mui-accent: #0f766e;
+}</code></pre></article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div id="block-crud-modal" class="mui-modal-backdrop" aria-hidden="true">
+      <section class="mui-modal">
+        <div class="mui-modal-header"><h2>Crear registro</h2><button class="mui-btn mui-btn-icon" data-mui-close-modal>x</button></div>
+        <form class="mui-modal-body mui-form"><input class="mui-input" placeholder="Nombre"><select class="mui-select"><option>Activo</option><option>Pausado</option></select></form>
+        <div class="mui-modal-footer"><button class="mui-btn" data-mui-close-modal>Cancelar</button><button class="mui-btn mui-btn-primary" data-mui-close-modal>Guardar</button></div>
+      </section>
+    </div>
+
+    <div id="block-drawer" class="mui-drawer-backdrop">
+      <aside class="mui-drawer mui-stack">
+        <div class="mui-cluster" style="justify-content:space-between"><strong>Editar item</strong><button class="mui-btn mui-btn-icon" data-mui-close-drawer>x</button></div>
+        <input class="mui-input" placeholder="Nombre">
+        <textarea class="mui-textarea" placeholder="Descripcion"></textarea>
+        <button class="mui-btn mui-btn-primary" data-mui-close-drawer>Guardar</button>
+      </aside>
+    </div>
+
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>

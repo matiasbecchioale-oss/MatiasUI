@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Components</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+  </head>
+  <body class="mui-body">
+    <nav class="mui-nav" data-mui-nav>
+      <div class="mui-container mui-nav-inner">
+        <a class="mui-brand" href="./"><span class="mui-brand-mark">M</span><span>MatiasUI</span></a>
+        <button class="mui-btn mui-btn-icon mui-nav-toggle" data-mui-nav-toggle aria-expanded="false">☰</button>
+        <div class="mui-nav-links">
+          <a class="mui-nav-link" href="./">Inicio</a>
+          <a class="mui-nav-link" href="blocks.html">Blocks</a>
+          <a class="mui-nav-link" href="snippets.html">Snippets</a>
+          <a class="mui-nav-link" href="live.html">Live</a>
+          <a class="mui-nav-link" href="animations.html">Animaciones</a>
+          <a class="mui-nav-link" href="file-tree.html">File tree</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mui-section">
+      <div class="mui-container mui-stack" style="--mui-gap: 32px">
+        <header class="mui-stack">
+          <span class="mui-badge">Componentes +10 por seccion</span>
+          <h1 class="mui-title">Galeria extendida</h1>
+          <p class="mui-subtitle">Bloques listos para copiar en landings, dashboards, ecommerce, auth, perfiles y CRUD.</p>
+        </header>
+
+        <section class="mui-stack">
+          <h2 class="mui-heading">Navegacion</h2>
+          <div class="mui-grid mui-grid-2">
+            <div class="mui-card"><nav class="mui-breadcrumb"><a href="#">Home</a><span>Docs</span><span>Components</span></nav></div>
+            <div class="mui-card"><div class="mui-pagination"><a class="mui-page" href="#">1</a><a class="mui-page" aria-current="page" href="#">2</a><a class="mui-page" href="#">3</a></div></div>
+            <div class="mui-card"><div class="mui-cluster"><a class="mui-nav-link" href="#">Overview</a><a class="mui-nav-link" aria-current="page" href="#">API</a><a class="mui-nav-link" href="#">Examples</a></div></div>
+            <div class="mui-card"><div class="mui-dropdown" data-mui-dropdown><button class="mui-btn" data-mui-dropdown-trigger>Workspace</button><div class="mui-dropdown-menu"><a class="mui-menu-item" href="#">Personal</a><a class="mui-menu-item" href="#">Team</a></div></div></div>
+            <div class="mui-card"><button class="mui-btn mui-btn-primary" data-mui-open-drawer="#docs-drawer">Abrir drawer</button></div>
+            <div class="mui-card"><label class="mui-search"><input class="mui-input" data-mui-search-focus placeholder="Presiona / para buscar"></label></div>
+            <div class="mui-card"><div class="mui-tabs" data-mui-tabs><div class="mui-tab-list"><button class="mui-tab" role="tab" data-mui-tab="#nav-a" aria-selected="true">Uno</button><button class="mui-tab" role="tab" data-mui-tab="#nav-b" aria-selected="false">Dos</button></div><div id="nav-a" role="tabpanel">Panel uno</div><div id="nav-b" role="tabpanel" hidden>Panel dos</div></div></div>
+            <div class="mui-card"><div class="mui-command"><input class="mui-input" placeholder="Command menu"><div class="mui-command-list"><button class="mui-menu-item">Crear proyecto</button><button class="mui-menu-item">Abrir settings</button></div></div></div>
+            <div class="mui-card"><div class="mui-chip"><span class="mui-chip-dot"></span>Filtro activo</div></div>
+            <div class="mui-card"><button class="mui-btn mui-tooltip" data-mui-tooltip="Tooltip nativo MatiasUI">Hover tooltip</button></div>
+          </div>
+        </section>
+
+        <section class="mui-stack">
+          <h2 class="mui-heading">Contenido</h2>
+          <div class="mui-grid mui-grid-3">
+            <article class="mui-card mui-card-hover"><span class="mui-feature-icon">A</span><h3>Feature card</h3><p class="mui-muted">Descripcion corta.</p></article>
+            <article class="mui-card"><h3>Stat</h3><div class="mui-stat-value" data-mui-count-to="128">0</div><p class="mui-muted">Usuarios</p></article>
+            <article class="mui-card"><h3>Progress</h3><div class="mui-progress"><span style="--mui-value: 72%"></span></div></article>
+            <article class="mui-card"><h3>Rating</h3><div class="mui-rating">★★★★★</div></article>
+            <article class="mui-card"><h3>Timeline</h3><div class="mui-timeline"><div class="mui-timeline-item">Idea</div><div class="mui-timeline-item">Build</div></div></article>
+            <article class="mui-card"><h3>Empty state</h3><div class="mui-empty">Sin resultados</div></article>
+            <article class="mui-card"><h3>Marquee</h3><div class="mui-marquee"><span>Crimson</span><span>Astro</span><span>CSS</span><span>JS</span></div></article>
+            <article class="mui-card"><h3>Skeleton</h3><div class="mui-skeleton"></div><br><div class="mui-skeleton" style="width: 60%"></div></article>
+            <article class="mui-card"><h3>Avatar</h3><span class="mui-avatar">M</span></article>
+            <article class="mui-card"><h3>CTA mini</h3><button class="mui-btn mui-btn-primary">Empezar</button></article>
+          </div>
+        </section>
+
+        <section class="mui-stack">
+          <h2 class="mui-heading">Aplicacion</h2>
+          <div class="mui-grid mui-grid-2">
+            <div class="mui-alert"><span>Alerta dismissible</span><button class="mui-btn mui-btn-icon" data-mui-dismiss=".mui-alert">x</button></div>
+            <div class="mui-notification"><span class="mui-avatar">N</span><div><strong>Notificacion</strong><p class="mui-muted">Nuevo evento.</p></div><span class="mui-badge">Ahora</span></div>
+            <div class="mui-card"><div class="mui-upload">Arrastra archivos aqui</div></div>
+            <div class="mui-card"><div class="mui-calendar"><span class="mui-day">1</span><span class="mui-day">2</span><span class="mui-day mui-day-active">3</span><span class="mui-day">4</span><span class="mui-day">5</span><span class="mui-day">6</span><span class="mui-day">7</span></div></div>
+            <div class="mui-card"><div class="mui-chat"><div class="mui-message">Hola, hay cambios?</div><div class="mui-message mui-message-self">Si, ya estan.</div></div></div>
+            <div class="mui-card"><div class="mui-kanban"><div class="mui-kanban-column"><strong>Todo</strong><div class="mui-card">Docs</div></div><div class="mui-kanban-column"><strong>Doing</strong><div class="mui-card">CSS</div></div><div class="mui-kanban-column"><strong>Done</strong><div class="mui-card">JS</div></div></div></div>
+            <div class="mui-card"><div class="mui-inbox"><div class="mui-inbox-item"><span class="mui-avatar">A</span><span>Email recibido</span><span class="mui-badge">New</span></div></div></div>
+            <div class="mui-card"><div class="mui-stepper"><div class="mui-step"><span class="mui-step-number">1</span><div><strong>Crear</strong><p class="mui-muted">Alta de registro.</p></div></div><div class="mui-step"><span class="mui-step-number">2</span><div><strong>Confirmar</strong><p class="mui-muted">Validacion.</p></div></div></div></div>
+            <div class="mui-card"><button class="mui-btn mui-btn-primary" data-mui-toast="Accion ejecutada">Toast action</button></div>
+            <div class="mui-card"><div class="mui-viewer-3d"><div class="mui-cube"><span>M</span><span>U</span><span>I</span><span>3D</span><span>CSS</span><span>OK</span></div></div></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="docs-drawer" class="mui-drawer-backdrop">
+      <aside class="mui-drawer mui-stack">
+        <div class="mui-cluster" style="justify-content: space-between"><strong>Drawer</strong><button class="mui-btn mui-btn-icon" data-mui-close-drawer>x</button></div>
+        <a class="mui-sidebar-link" href="#">Overview</a>
+        <a class="mui-sidebar-link" href="#">Components</a>
+        <a class="mui-sidebar-link" href="#">Settings</a>
+      </aside>
+    </div>
+
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+:root {
+	--mui-crimson-hsl: 345, 83%, 41%;
+	--mui-crimson-soft: hsla(var(--mui-crimson-hsl), 0.18);
+	--sl-color-accent-low: #3a121c;
+	--sl-color-accent: #c1123f;
+	--sl-color-accent-high: #ffd2dc;
+	--sl-color-white: #fff8f9;
+	--sl-color-gray-1: #f8e8ec;
+	--sl-color-gray-2: #efc3cc;
+	--sl-color-gray-3: #b98592;
+	--sl-color-gray-4: #72515a;
+	--sl-color-gray-5: #3b2028;
+	--sl-color-gray-6: #241116;
+	--sl-color-black: #16090d;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #ffe1e8;
+	--sl-color-accent: #c1123f;
+	--sl-color-accent-high: #6f0824;
+	--sl-color-white: #241116;
+	--sl-color-gray-1: #3b2028;
+	--sl-color-gray-2: #72515a;
+	--sl-color-gray-3: #b98592;
+	--sl-color-gray-4: #d9a9b4;
+	--sl-color-gray-5: #fff0f3;
+	--sl-color-gray-6: #fff8f9;
+	--sl-color-gray-7: #fffafb;
+	--sl-color-black: #ffffff;
+}
+
+[data-has-hero] .page {
+	background:
+		linear-gradient(215deg, var(--mui-crimson-soft), transparent 42%),
+		radial-gradient(var(--mui-crimson-soft), transparent 42%) no-repeat -60vw -40vh / 105vw 200vh,
+		radial-gradient(hsla(174, 77%, 26%, 0.14), transparent 65%) no-repeat 50%
+			calc(100% + 20rem) / 60rem 30rem;
+}
+
+[data-has-hero] header {
+	border-bottom: 1px solid transparent;
+	background-color: transparent;
+	-webkit-backdrop-filter: blur(16px);
+	backdrop-filter: blur(16px);
+}
+
+[data-has-hero] .hero > img {
+	filter: drop-shadow(0 0 3rem var(--mui-crimson-soft));
+}
+
+.hero h1 {
+	letter-spacing: 0;
+}
+
+.sl-markdown-content a:not(.card) {
+	color: var(--sl-color-accent);
+}
+
+.sl-markdown-content code {
+	border-color: color-mix(in srgb, var(--sl-color-accent) 24%, transparent);
+}

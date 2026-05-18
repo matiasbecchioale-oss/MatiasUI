@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Ecommerce</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+  </head>
+  <body class="mui-body">
+    <nav class="mui-nav"><div class="mui-container mui-nav-inner"><a class="mui-brand" href="#"><span class="mui-brand-mark">M</span><span>Shop</span></a><div class="mui-nav-links"><a class="mui-nav-link" href="#">Catalogo</a><a class="mui-nav-link" href="#">Pricing</a><button class="mui-btn mui-btn-primary" data-mui-open-modal="#cart">Carrito</button></div></div></nav>
+    <main>
+      <section class="mui-hero">
+        <div class="mui-container mui-split">
+          <div class="mui-stack"><span class="mui-badge">Crimson sale</span><h1 class="mui-title">Tienda moderna</h1><p class="mui-subtitle">Catalogo, producto, pricing y checkout con MatiasUI.</p><button class="mui-btn mui-btn-primary mui-btn-lg">Comprar ahora</button></div>
+          <div class="mui-hero-media"></div>
+        </div>
+      </section>
+      <section class="mui-section">
+        <div class="mui-container mui-grid mui-grid-3">
+          <article class="mui-card mui-card-hover mui-stack"><span class="mui-badge">Nuevo</span><h2>Producto Pro</h2><div class="mui-price">$49</div><button class="mui-btn mui-btn-primary">Agregar</button></article>
+          <article class="mui-card mui-card-hover mui-stack"><span class="mui-badge">Oferta</span><h2>Producto Team</h2><div class="mui-price">$79</div><button class="mui-btn mui-btn-primary">Agregar</button></article>
+          <article class="mui-card mui-card-hover mui-stack"><span class="mui-badge">Plus</span><h2>Producto Max</h2><div class="mui-price">$99</div><button class="mui-btn mui-btn-primary">Agregar</button></article>
+        </div>
+      </section>
+    </main>
+    <div id="cart" class="mui-modal-backdrop">
+      <section class="mui-modal">
+        <div class="mui-modal-header"><h2>Checkout</h2><button class="mui-btn mui-btn-icon" data-mui-close-modal>x</button></div>
+        <div class="mui-modal-body mui-stack"><div class="mui-summary-row"><span>Producto Pro</span><strong>$49</strong></div><button class="mui-btn mui-btn-primary">Pagar</button></div>
+      </section>
+    </div>
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>

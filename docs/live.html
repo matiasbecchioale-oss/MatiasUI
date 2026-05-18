@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Live</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+  </head>
+  <body class="mui-body">
+    <nav class="mui-nav"><div class="mui-container mui-nav-inner"><a class="mui-brand" href="./"><span class="mui-brand-mark">M</span><span>MatiasUI</span></a><div class="mui-nav-links"><a class="mui-nav-link" href="blocks.html">Blocks</a><a class="mui-nav-link" href="components.html">Componentes</a><a class="mui-nav-link" href="snippets.html">Snippets</a><a class="mui-nav-link" href="animations.html">Animaciones</a></div></div></nav>
+    <main class="mui-section">
+      <div class="mui-container mui-stack" style="--mui-gap: 22px">
+        <header><span class="mui-badge">Live playground</span><h1 class="mui-title">Edita y mira</h1><p class="mui-subtitle">Escribe HTML con clases MatiasUI y el preview se actualiza en vivo.</p></header>
+        <section class="mui-live" data-mui-live>
+          <textarea class="mui-live-editor" data-mui-live-editor>&lt;article class="mui-card mui-stack mui-animate-pop"&gt;
+  &lt;span class="mui-badge"&gt;Live&lt;/span&gt;
+  &lt;h2&gt;Hola MatiasUI&lt;/h2&gt;
+  &lt;p class="mui-muted"&gt;Cambia este codigo y mira el resultado.&lt;/p&gt;
+  &lt;button class="mui-btn mui-btn-primary" data-mui-toast="Funciona"&gt;Probar&lt;/button&gt;
+&lt;/article&gt;</textarea>
+          <iframe class="mui-live-preview" data-mui-live-preview title="Preview MatiasUI"></iframe>
+        </section>
+      </div>
+    </main>
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>

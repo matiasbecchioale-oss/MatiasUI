@@ -1,0 +1,27 @@
+{
+  "name": "matias-ui",
+  "version": "1.1.0",
+  "description": "MatiasUI: libreria CSS/JS framework-agnostic con estilo crimson para interfaces web modernas.",
+  "main": "dist/matias-ui.js",
+  "style": "dist/matias-ui.css",
+  "files": [
+    "dist",
+    "docs",
+    "examples",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "serve": "python3 -m http.server 4173"
+  },
+  "keywords": [
+    "css",
+    "ui",
+    "components",
+    "astro",
+    "crimson",
+    "framework-agnostic"
+  ],
+  "author": "Matias",
+  "license": "MIT"
+}

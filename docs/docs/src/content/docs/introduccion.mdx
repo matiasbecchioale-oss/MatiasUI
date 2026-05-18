@@ -1,0 +1,45 @@
+---
+title: Introduccion
+description: Documentacion oficial de MatiasUI, una libreria CSS/JS crimson para cualquier stack web.
+template: splash
+hero:
+  title: MatiasUI
+  tagline: Libreria CSS/JS framework-agnostic con componentes, bloques, interacciones y ejemplos listos para HTML, Astro, Laravel, Django, Rails, React, Vue o cualquier stack web.
+  actions:
+    - text: Instalar
+      icon: right-arrow
+      link: /guia/instalacion/
+    - text: Ver componentes
+      icon: puzzle
+      variant: minimal
+      link: /componentes/layout/
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="Framework-agnostic" icon="rocket">
+		Usa MatiasUI con HTML plano o cualquier framework. Solo necesitas cargar `matias-ui.css` y, si quieres interacciones, `matias-ui.js`.
+	</Card>
+	<Card title="Crimson por defecto" icon="star">
+		La identidad visual usa tokens crimson, superficies limpias, bordes suaves, modo oscuro y variables CSS faciles de personalizar.
+	</Card>
+	<Card title="Componentes completos" icon="puzzle">
+		Incluye navs, cards, forms, modales, drawers, tablas, pricing, checkout, perfiles, toasts, tabs, acordeones y mas.
+	</Card>
+	<Card title="Bloques para paginas reales" icon="seti:html">
+		Marketing, dashboards, ecommerce, publisher, estados, CRUD y ejemplos interactivos listos para adaptar.
+	</Card>
+</CardGrid>
+
+## Que incluye
+
+- `dist/matias-ui.css`: estilos, tokens, componentes y utilidades.
+- `dist/matias-ui.js`: interacciones progresivas con atributos `data-mui-*`.
+- `examples/`: paginas de prueba completas como dashboard, ecommerce y tarjeta credito/debito.
+- Documentacion Starlight con guias, referencia, bloques y snippets.
+
+## Filosofia
+
+MatiasUI no intenta controlar tu aplicacion. Te da una capa visual y de comportamiento liviana, portable y facil de inspeccionar. Puedes copiar HTML, adaptar clases y mantener tu backend o framework favorito.
+

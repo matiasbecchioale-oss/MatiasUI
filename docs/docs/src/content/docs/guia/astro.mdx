@@ -1,0 +1,45 @@
+---
+title: Astro
+description: Como usar MatiasUI en proyectos Astro.
+---
+
+## Import desde un layout
+
+```astro
+---
+import "matias-ui/dist/matias-ui.css";
+---
+
+<html lang="es">
+  <body class="mui-body">
+    <slot />
+    <script src="/node_modules/matias-ui/dist/matias-ui.js"></script>
+  </body>
+</html>
+```
+
+## Copia a public
+
+Tambien puedes copiar los archivos a `public/matias-ui/`:
+
+```astro
+<link rel="stylesheet" href="/matias-ui/matias-ui.css" />
+<script defer src="/matias-ui/matias-ui.js"></script>
+```
+
+## Componentes Astro
+
+Puedes envolver clases MatiasUI dentro de componentes Astro:
+
+```astro
+---
+const { title, description } = Astro.props;
+---
+
+<article class="mui-card mui-card-hover mui-stack">
+  <span class="mui-badge">Feature</span>
+  <h2>{title}</h2>
+  <p class="mui-muted">{description}</p>
+</article>
+```
+

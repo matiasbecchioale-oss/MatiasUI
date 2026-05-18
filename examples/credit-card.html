@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI Card Studio</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+    <style>
+      .card-page {
+        background:
+          radial-gradient(circle at 12% 12%, rgba(244, 63, 104, 0.18), transparent 28%),
+          radial-gradient(circle at 82% 10%, rgba(15, 118, 110, 0.16), transparent 24%),
+          var(--mui-bg);
+      }
+
+      .bank-card-wrap {
+        min-height: 340px;
+        display: grid;
+        place-items: center;
+        perspective: 1200px;
+      }
+
+      .bank-card {
+        position: relative;
+        width: min(430px, 92vw);
+        aspect-ratio: 1.586;
+        color: white;
+        transform-style: preserve-3d;
+        transition: transform 520ms cubic-bezier(.2, .8, .2, 1);
+      }
+
+      .bank-card.is-flipped {
+        transform: rotateY(180deg);
+      }
+
+      .bank-card-face {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 26px;
+        background:
+          linear-gradient(135deg, rgba(36, 17, 22, 0.92), rgba(193, 18, 63, 0.88)),
+          linear-gradient(45deg, rgba(255, 255, 255, 0.18), transparent);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 22px;
+        box-shadow: 0 28px 70px rgba(143, 13, 47, 0.34);
+        backface-visibility: hidden;
+      }
+
+      .bank-card-face::before {
+        content: "";
+        position: absolute;
+        inset: -35% auto auto -12%;
+        width: 260px;
+        height: 260px;
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 50%;
+      }
+
+      .bank-card-face::after {
+        content: "";
+        position: absolute;
+        right: -16%;
+        bottom: -38%;
+        width: 280px;
+        height: 280px;
+        background: rgba(15, 118, 110, 0.32);
+        border-radius: 50%;
+      }
+
+      .bank-card-back {
+        transform: rotateY(180deg);
+      }
+
+      .card-metal {
+        width: 56px;
+        height: 42px;
+        background: linear-gradient(135deg, #ffe7a3, #b7791f);
+        border-radius: 9px;
+        box-shadow: inset 0 0 0 1px rgba(36, 17, 22, 0.18);
+      }
+
+      .card-number {
+        position: relative;
+        z-index: 1;
+        font-family: var(--mui-mono);
+        font-size: clamp(1.35rem, 5vw, 1.85rem);
+        letter-spacing: 0;
+      }
+
+      .card-strip {
+        height: 48px;
+        margin-inline: -26px;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      .card-signature {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        color: #241116;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 6px;
+        font-family: var(--mui-mono);
+      }
+
+      .mini-card {
+        min-height: 112px;
+        display: grid;
+        align-content: space-between;
+        color: white;
+        background: linear-gradient(135deg, var(--mui-primary), var(--mui-accent));
+      }
+
+      .card-wave {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: end;
+        gap: 5px;
+        min-height: 90px;
+      }
+
+      .card-wave span {
+        display: block;
+        height: var(--h);
+        background: linear-gradient(180deg, var(--mui-primary), var(--mui-accent));
+        border-radius: 999px 999px 4px 4px;
+        animation: wave 1.8s ease-in-out infinite;
+        animation-delay: var(--d);
+      }
+
+      @keyframes wave {
+        50% {
+          transform: scaleY(0.58);
+          opacity: 0.64;
+        }
+      }
+
+      .card-brand {
+        position: relative;
+        z-index: 1;
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
+      .security-dot {
+        width: 12px;
+        height: 12px;
+        background: var(--mui-success);
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--mui-success) 14%, transparent);
+      }
+    </style>
+  </head>
+  <body class="mui-body card-page">
+    <nav class="mui-nav" data-mui-nav>
+      <div class="mui-container mui-nav-inner">
+        <a class="mui-brand" href="../docs/">
+          <span class="mui-brand-mark">M</span>
+          <span>MatiasCard</span>
+        </a>
+        <button class="mui-btn mui-btn-icon mui-nav-toggle" data-mui-nav-toggle aria-expanded="false" aria-label="Abrir menu">☰</button>
+        <div class="mui-nav-links">
+          <a class="mui-nav-link" href="#personalizar">Personalizar</a>
+          <a class="mui-nav-link" href="#seguridad">Seguridad</a>
+          <a class="mui-nav-link" href="#movimientos">Movimientos</a>
+          <button class="mui-btn mui-btn-soft" data-mui-theme-toggle type="button">Tema</button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mui-hero">
+      <div class="mui-container mui-split">
+        <section class="mui-stack mui-animate-slide-up" style="--mui-gap: 18px">
+          <span class="mui-badge">Demo 100% funcional</span>
+          <h1 class="mui-title">Tarjeta credito/debito interactiva</h1>
+          <p class="mui-subtitle">Edita los datos, cambia el tipo de tarjeta, simula pagos, revisa seguridad y mira la interfaz reaccionar en vivo con MatiasUI.</p>
+          <div class="mui-cluster">
+            <a class="mui-btn mui-btn-primary mui-btn-lg" href="#personalizar">Personalizar tarjeta</a>
+            <button class="mui-btn mui-btn-lg" type="button" data-mui-open-modal="#pay-modal">Simular pago</button>
+            <button class="mui-btn mui-btn-soft mui-btn-lg" type="button" id="freeze-card">Congelar</button>
+          </div>
+        </section>
+
+        <section class="bank-card-wrap mui-animate-float" aria-label="Tarjeta bancaria interactiva">
+          <div class="bank-card" id="bank-card">
+            <div class="bank-card-face">
+              <div class="mui-cluster" style="justify-content: space-between">
+                <div class="card-metal"></div>
+                <span class="card-brand" id="card-type-label">Credito</span>
+              </div>
+              <div>
+                <div class="card-number" id="preview-number">4242 4242 4242 4242</div>
+              </div>
+              <div class="mui-cluster" style="justify-content: space-between">
+                <div>
+                  <small>Titular</small>
+                  <strong id="preview-name" style="display: block">MATIAS UI</strong>
+                </div>
+                <div>
+                  <small>Vence</small>
+                  <strong id="preview-exp" style="display: block">12/30</strong>
+                </div>
+              </div>
+            </div>
+            <div class="bank-card-face bank-card-back">
+              <div class="card-strip"></div>
+              <div class="card-signature">
+                <span id="preview-sign">MATIAS UI</span>
+                <strong id="preview-cvv">123</strong>
+              </div>
+              <p style="position: relative; z-index: 1; margin: 0">Uso demo. No ingreses datos reales.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section id="personalizar" class="mui-section">
+        <div class="mui-container mui-grid mui-grid-2">
+          <article class="mui-card mui-stack">
+            <div>
+              <span class="mui-kicker">Editor live</span>
+              <h2 class="mui-heading">Datos de la tarjeta</h2>
+            </div>
+            <form class="mui-form" id="card-form">
+              <label class="mui-field">
+                <span class="mui-label">Titular</span>
+                <input class="mui-input" id="name-input" value="Matias UI" maxlength="26">
+              </label>
+              <label class="mui-field">
+                <span class="mui-label">Numero</span>
+                <input class="mui-input" id="number-input" value="4242 4242 4242 4242" inputmode="numeric" maxlength="19">
+              </label>
+              <div class="mui-grid mui-grid-3">
+                <label class="mui-field">
+                  <span class="mui-label">Vence</span>
+                  <input class="mui-input" id="exp-input" value="12/30" maxlength="5">
+                </label>
+                <label class="mui-field">
+                  <span class="mui-label">CVV</span>
+                  <input class="mui-input" id="cvv-input" value="123" maxlength="4">
+                </label>
+                <label class="mui-field">
+                  <span class="mui-label">Tipo</span>
+                  <select class="mui-select" id="type-input">
+                    <option value="Credito">Credito</option>
+                    <option value="Debito">Debito</option>
+                    <option value="Prepaga">Prepaga</option>
+                  </select>
+                </label>
+              </div>
+              <div class="mui-cluster">
+                <button class="mui-btn mui-btn-primary" type="button" id="save-card">Guardar cambios</button>
+                <button class="mui-btn" type="button" id="flip-card">Ver reverso</button>
+                <button class="mui-btn mui-btn-soft" type="reset">Reset</button>
+              </div>
+            </form>
+          </article>
+
+          <aside class="mui-stack">
+            <div class="mui-alert mui-alert-info">
+              <div>
+                <strong>Estado de la tarjeta</strong>
+                <p class="mui-muted" id="card-status" style="margin: 4px 0 0">Activa y lista para operar.</p>
+              </div>
+              <button class="mui-btn mui-btn-icon" data-mui-dismiss=".mui-alert" type="button">x</button>
+            </div>
+            <div class="mui-metric-row">
+              <article class="mui-card mui-stat">
+                <span class="mui-muted">Limite</span>
+                <span class="mui-stat-value">$<span data-mui-count-to="2500">0</span></span>
+              </article>
+              <article class="mui-card mui-stat">
+                <span class="mui-muted">Usado</span>
+                <span class="mui-stat-value">$<span id="used-amount">740</span></span>
+              </article>
+              <article class="mui-card mui-stat">
+                <span class="mui-muted">Score</span>
+                <span class="mui-stat-value" data-mui-count-to="91">0</span>
+              </article>
+              <article class="mui-card mui-stat">
+                <span class="mui-muted">Cashback</span>
+                <span class="mui-stat-value">3%</span>
+              </article>
+            </div>
+            <article class="mui-card mui-stack">
+              <div class="mui-cluster" style="justify-content: space-between">
+                <strong>Consumo mensual</strong>
+                <span class="mui-badge mui-badge-success">Saludable</span>
+              </div>
+              <div class="mui-progress"><span id="limit-progress" style="--mui-value: 30%"></span></div>
+              <div class="card-wave" aria-hidden="true">
+                <span style="--h: 42%; --d: 0s"></span><span style="--h: 66%; --d: .05s"></span><span style="--h: 52%; --d: .1s"></span><span style="--h: 84%; --d: .15s"></span>
+                <span style="--h: 64%; --d: .2s"></span><span style="--h: 78%; --d: .25s"></span><span style="--h: 48%; --d: .3s"></span><span style="--h: 92%; --d: .35s"></span>
+                <span style="--h: 58%; --d: .4s"></span><span style="--h: 76%; --d: .45s"></span><span style="--h: 46%; --d: .5s"></span><span style="--h: 70%; --d: .55s"></span>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section id="seguridad" class="mui-section mui-section-sm">
+        <div class="mui-container mui-stack" style="--mui-gap: 22px">
+          <div>
+            <span class="mui-kicker">Seguridad</span>
+            <h2 class="mui-heading">Controles interactivos</h2>
+          </div>
+          <div class="mui-grid mui-grid-3">
+            <article class="mui-card mui-stack mui-animate-tilt">
+              <div class="mui-cluster"><span class="security-dot"></span><strong>Compras online</strong></div>
+              <p class="mui-muted">Activadas para comercios verificados.</p>
+              <button class="mui-btn mui-btn-soft mui-w-full security-toggle" type="button">Desactivar</button>
+            </article>
+            <article class="mui-card mui-stack mui-animate-tilt">
+              <div class="mui-cluster"><span class="security-dot"></span><strong>Contactless</strong></div>
+              <p class="mui-muted">Pagos sin contacto hasta el limite permitido.</p>
+              <button class="mui-btn mui-btn-soft mui-w-full security-toggle" type="button">Desactivar</button>
+            </article>
+            <article class="mui-card mui-stack mui-animate-tilt">
+              <div class="mui-cluster"><span class="security-dot"></span><strong>Viajes</strong></div>
+              <p class="mui-muted">Uso internacional disponible.</p>
+              <button class="mui-btn mui-btn-soft mui-w-full security-toggle" type="button">Desactivar</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="movimientos" class="mui-section">
+        <div class="mui-container mui-grid mui-grid-2">
+          <article class="mui-card mui-stack">
+            <div class="mui-cluster" style="justify-content: space-between">
+              <div>
+                <span class="mui-kicker">Movimientos</span>
+                <h2 class="mui-heading">Ultimos pagos</h2>
+              </div>
+              <button class="mui-btn mui-btn-primary" type="button" id="add-payment">Agregar pago demo</button>
+            </div>
+            <div class="mui-table-wrap">
+              <table class="mui-table">
+                <thead><tr><th>Comercio</th><th>Categoria</th><th>Monto</th><th>Estado</th></tr></thead>
+                <tbody id="payments-table">
+                  <tr><td>Astro Hosting</td><td>Software</td><td>$120</td><td><span class="mui-badge mui-badge-success">Aprobado</span></td></tr>
+                  <tr><td>Matias Cafe</td><td>Comida</td><td>$18</td><td><span class="mui-badge mui-badge-success">Aprobado</span></td></tr>
+                  <tr><td>UI Assets</td><td>Diseno</td><td>$64</td><td><span class="mui-badge">Pendiente</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <aside class="mui-stack">
+            <article class="mui-card mui-stack">
+              <h2>Beneficios</h2>
+              <ul class="mui-list">
+                <li class="mui-list-item"><span>3% cashback en software</span><span class="mui-badge mui-badge-success">Activo</span></li>
+                <li class="mui-list-item"><span>2 cuotas sin interes</span><span class="mui-badge">Nuevo</span></li>
+                <li class="mui-list-item"><span>Seguro de compra</span><span class="mui-badge mui-badge-success">OK</span></li>
+              </ul>
+            </article>
+            <article class="mui-cta mui-stack mui-animate-glow">
+              <span class="mui-kicker" style="color: white">Premium</span>
+              <h2 class="mui-heading">Subi tu limite al instante</h2>
+              <p class="mui-muted">Simula una mejora de limite y mira como cambian los indicadores.</p>
+              <button class="mui-btn" type="button" id="raise-limit">Subir limite</button>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mui-footer">
+      <div class="mui-container mui-footer-grid">
+        <div><a class="mui-brand" href="../docs/"><span class="mui-brand-mark">M</span><span>MatiasCard</span></a><p>Demo interactiva hecha con MatiasUI.</p></div>
+        <div><strong>Secciones</strong><a href="#personalizar">Editor</a><a href="#seguridad">Seguridad</a></div>
+        <div><strong>Demo</strong><a href="#movimientos">Movimientos</a><a href="../docs/components.html">Componentes</a></div>
+        <div><strong>Acciones</strong><a href="#" id="footer-pay">Simular pago</a><a href="../docs/live.html">Live</a></div>
+      </div>
+    </footer>
+
+    <div id="pay-modal" class="mui-modal-backdrop" aria-hidden="true">
+      <section class="mui-modal" role="dialog" aria-modal="true" aria-labelledby="pay-title">
+        <div class="mui-modal-header">
+          <h2 id="pay-title">Simular pago</h2>
+          <button class="mui-btn mui-btn-icon" type="button" data-mui-close-modal aria-label="Cerrar">x</button>
+        </div>
+        <div class="mui-modal-body">
+          <form class="mui-form">
+            <label class="mui-field"><span class="mui-label">Comercio</span><input class="mui-input" id="pay-store" value="Matias Store"></label>
+            <label class="mui-field"><span class="mui-label">Monto</span><input class="mui-input" id="pay-amount" value="89" inputmode="numeric"></label>
+            <label class="mui-field"><span class="mui-label">Cuotas</span><select class="mui-select" id="pay-installments"><option>1 pago</option><option>3 cuotas</option><option>6 cuotas</option></select></label>
+          </form>
+        </div>
+        <div class="mui-modal-footer">
+          <button class="mui-btn" type="button" data-mui-close-modal>Cancelar</button>
+          <button class="mui-btn mui-btn-primary" type="button" id="confirm-pay" data-mui-close-modal>Confirmar pago</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="../dist/matias-ui.js"></script>
+    <script>
+      const bankCard = document.querySelector("#bank-card");
+      const form = document.querySelector("#card-form");
+      const nameInput = document.querySelector("#name-input");
+      const numberInput = document.querySelector("#number-input");
+      const expInput = document.querySelector("#exp-input");
+      const cvvInput = document.querySelector("#cvv-input");
+      const typeInput = document.querySelector("#type-input");
+      const previewName = document.querySelector("#preview-name");
+      const previewSign = document.querySelector("#preview-sign");
+      const previewNumber = document.querySelector("#preview-number");
+      const previewExp = document.querySelector("#preview-exp");
+      const previewCvv = document.querySelector("#preview-cvv");
+      const cardTypeLabel = document.querySelector("#card-type-label");
+      const cardStatus = document.querySelector("#card-status");
+      const usedAmount = document.querySelector("#used-amount");
+      const limitProgress = document.querySelector("#limit-progress");
+      const paymentsTable = document.querySelector("#payments-table");
+      let frozen = false;
+      let used = 740;
+      let limit = 2500;
+
+      function onlyDigits(value) {
+        return value.replace(/\D/g, "");
+      }
+
+      function formatCardNumber(value) {
+        return onlyDigits(value).slice(0, 16).replace(/(.{4})/g, "$1 ").trim();
+      }
+
+      function syncCard() {
+        const name = nameInput.value.trim().toUpperCase() || "TU NOMBRE";
+        previewName.textContent = name;
+        previewSign.textContent = name;
+        previewNumber.textContent = formatCardNumber(numberInput.value) || "0000 0000 0000 0000";
+        previewExp.textContent = expInput.value || "MM/AA";
+        previewCvv.textContent = cvvInput.value || "000";
+        cardTypeLabel.textContent = typeInput.value;
+      }
+
+      function syncUsage() {
+        usedAmount.textContent = String(used);
+        const percent = Math.min(Math.round((used / limit) * 100), 100);
+        limitProgress.style.setProperty("--mui-value", percent + "%");
+      }
+
+      form.addEventListener("input", syncCard);
+      form.addEventListener("reset", () => window.setTimeout(syncCard));
+      numberInput.addEventListener("input", () => {
+        numberInput.value = formatCardNumber(numberInput.value);
+      });
+      expInput.addEventListener("input", () => {
+        expInput.value = onlyDigits(expInput.value).slice(0, 4).replace(/(\d{2})(\d{1,2})/, "$1/$2");
+      });
+      cvvInput.addEventListener("focus", () => bankCard.classList.add("is-flipped"));
+      cvvInput.addEventListener("blur", () => bankCard.classList.remove("is-flipped"));
+
+      document.querySelector("#flip-card").addEventListener("click", () => {
+        bankCard.classList.toggle("is-flipped");
+      });
+
+      document.querySelector("#save-card").addEventListener("click", () => {
+        MatiasUI.toast("Tarjeta actualizada");
+        bankCard.classList.add("mui-animate-pop");
+        window.setTimeout(() => bankCard.classList.remove("mui-animate-pop"), 500);
+      });
+
+      document.querySelector("#freeze-card").addEventListener("click", (event) => {
+        frozen = !frozen;
+        event.currentTarget.textContent = frozen ? "Descongelar" : "Congelar";
+        cardStatus.textContent = frozen ? "Congelada temporalmente. Los pagos seran rechazados." : "Activa y lista para operar.";
+        MatiasUI.toast(frozen ? "Tarjeta congelada" : "Tarjeta activa");
+      });
+
+      document.querySelectorAll(".security-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+          const disabled = button.textContent === "Activar";
+          button.textContent = disabled ? "Desactivar" : "Activar";
+          button.closest(".mui-card").querySelector(".security-dot").style.background = disabled ? "var(--mui-success)" : "var(--mui-danger)";
+          MatiasUI.toast(disabled ? "Control activado" : "Control desactivado");
+        });
+      });
+
+      function addPayment(store, amount, status = "Aprobado") {
+        const row = document.createElement("tr");
+        row.innerHTML = "<td>" + store + "</td><td>Demo</td><td>$" + amount + "</td><td><span class='mui-badge mui-badge-success'>" + status + "</span></td>";
+        paymentsTable.prepend(row);
+        used += Number(amount) || 0;
+        syncUsage();
+      }
+
+      document.querySelector("#add-payment").addEventListener("click", () => {
+        addPayment("Demo Market", 37);
+        MatiasUI.toast("Pago demo agregado");
+      });
+
+      document.querySelector("#confirm-pay").addEventListener("click", () => {
+        const store = document.querySelector("#pay-store").value || "Comercio demo";
+        const amount = Number(document.querySelector("#pay-amount").value || 0);
+        if (frozen) {
+          MatiasUI.toast("Pago rechazado: tarjeta congelada");
+          return;
+        }
+        addPayment(store, amount);
+        MatiasUI.toast("Pago aprobado");
+      });
+
+      document.querySelector("#raise-limit").addEventListener("click", () => {
+        limit += 1000;
+        syncUsage();
+        MatiasUI.toast("Limite aumentado a $" + limit);
+      });
+
+      document.querySelector("#footer-pay").addEventListener("click", (event) => {
+        event.preventDefault();
+        document.querySelector("[data-mui-open-modal='#pay-modal']").click();
+      });
+
+      syncCard();
+      syncUsage();
+    </script>
+  </body>
+</html>

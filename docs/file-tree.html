@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es" data-mui-theme="crimson">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MatiasUI File Tree</title>
+    <link rel="stylesheet" href="../dist/matias-ui.css">
+  </head>
+  <body class="mui-body">
+    <nav class="mui-nav"><div class="mui-container mui-nav-inner"><a class="mui-brand" href="./"><span class="mui-brand-mark">M</span><span>MatiasUI</span></a><div class="mui-nav-links"><a class="mui-nav-link" href="blocks.html">Blocks</a><a class="mui-nav-link" href="components.html">Componentes</a><a class="mui-nav-link" href="snippets.html">Snippets</a><a class="mui-nav-link" href="live.html">Live</a></div></div></nav>
+    <main class="mui-section">
+      <div class="mui-container mui-grid mui-grid-2">
+        <section class="mui-stack">
+          <span class="mui-badge">Estructura</span>
+          <h1 class="mui-title">File tree</h1>
+          <p class="mui-subtitle">Estructura recomendada para usar MatiasUI como libreria local, CDN o paquete npm.</p>
+          <ul class="mui-file-tree">
+            <li>matias-ui/
+              <ul>
+                <li>dist/
+                  <ul>
+                    <li>matias-ui.css</li>
+                    <li>matias-ui.js</li>
+                  </ul>
+                </li>
+                <li>docs/
+                  <ul>
+                    <li>index.html</li>
+                    <li>components.html</li>
+                    <li>snippets.html</li>
+                    <li>live.html</li>
+                    <li>animations.html</li>
+                  </ul>
+                </li>
+                <li>examples/basic.html</li>
+                <li>README.md</li>
+                <li>package.json</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <aside class="mui-card mui-stack">
+          <h2>Instalacion recomendada</h2>
+          <p class="mui-muted">Para Astro o cualquier framework, copia `dist/` a `public/matias-ui/` o importa desde npm cuando publiques.</p>
+          <div class="mui-alert mui-alert-info">El CSS es independiente. El JS solo suma interacciones.</div>
+        </aside>
+      </div>
+    </main>
+    <script src="../dist/matias-ui.js"></script>
+  </body>
+</html>
