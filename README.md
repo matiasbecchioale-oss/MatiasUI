@@ -15,20 +15,21 @@ MatiasUI es una libreria de estilos web framework-agnostic con identidad crimson
 <script defer src="/dist/matias-ui.js"></script>
 ```
 
-### CDN
+### CDN (Recomendado)
 
-Cuando publiques el paquete, podes usar un CDN npm:
+Podes usar un CDN npm:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matias-ui@1/dist/matias-ui.css">
-<script defer src="https://cdn.jsdelivr.net/npm/matias-ui@1/dist/matias-ui.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/matiasbecchioale-oss/MatiasUI@v1.0.0/dist/matias-ui.css">
+<script defer src="https://cdn.jsdelivr.net/gh/matiasbecchioale-oss/MatiasUI@v1.0.0/dist/matias-ui.js"></script>
 ```
 
-Tambien funciona con un CDN propio:
+Oficial:
 
 ```html
-<link rel="stylesheet" href="https://tu-dominio.com/matias-ui/dist/matias-ui.css">
-<script defer src="https://tu-dominio.com/matias-ui/dist/matias-ui.js"></script>
+<link rel="stylesheet" href="http://matiasui.unaux.com/dist/matias-ui.css">
+<script defer src="http://matiasui.unaux.com/dist/matias-ui.js"></script>
 ```
 
 ## Uso minimo
